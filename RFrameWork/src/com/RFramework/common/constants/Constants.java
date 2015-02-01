@@ -5,6 +5,6 @@ package com.RFramework.common.constants;
  */
 public class Constants {
 
-    public static final String ROOT_PATH = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+    public static final String ROOT_PATH = Constants.class.getClassLoader().getResource("").getPath();
 
 }

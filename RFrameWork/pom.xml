@@ -189,20 +189,25 @@
         </testResources>
         <plugins>
             <!-- Run annotation processors on src/main/java sources -->
-            <plugin>
-                <groupId>org.bsc.maven</groupId>
-                <artifactId>maven-processor-plugin</artifactId>
-                <version>3.1.0-beta1</version>
-                <executions>
-                    <execution>
-                        <id>process</id>
-                        <goals>
-                            <goal>process</goal>
-                        </goals>
-                        <phase>generate-sources</phase>
-                    </execution>
-                </executions>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.bsc.maven</groupId>-->
+                <!--<artifactId>maven-processor-plugin</artifactId>-->
+                <!--<version>3.1.0-beta1</version>-->
+                <!--<configuration>-->
+                    <!--<processors>-->
+                        <!--<processor>com.RFramework.common.annotations.processor.BeanAnnotationProcessor</processor>-->
+                    <!--</processors>-->
+                <!--</configuration>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<id>process</id>-->
+                        <!--<goals>-->
+                            <!--<goal>process</goal>-->
+                        <!--</goals>-->
+                        <!--<phase>generate-sources</phase>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+            <!--</plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -211,7 +216,6 @@
                     <source>1.7</source>
                     <target>1.7</target>
                     <encoding>UTF-8</encoding>
-                    <!--<compilerArgument>-proc:none</compilerArgument>-->
                     <annotationProcessors>
                         <annotationProcessor>
                             com.RFramework.common.annotations.processor.BeanAnnotationProcessor
