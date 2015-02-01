@@ -9,6 +9,7 @@ import javax.annotation.processing.RoundEnvironment;
 import javax.annotation.processing.SupportedAnnotationTypes;
 import javax.lang.model.element.TypeElement;
 import javax.tools.Diagnostic;
+import javax.tools.JavaFileObject;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
@@ -43,8 +44,9 @@ public class BeanAnnotationProcessor extends AbstractProcessor{
             Diagnostic.Kind.NOTE, "Hello World!");
         }
         try {
-            FileWriter f = new FileWriter("test");
-            TemplateHelper.get().genFile("dao.ftl", new HashMap(), f);
+            JavaFileObject sourceFile = processingEnv.getFiler().createSourceFile("test.TestDao");
+            TemplateHelper.get().genFile("dao.ftl", new HashMap(), sourceFile.openWriter());
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (TemplateException e) {

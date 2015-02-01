@@ -94,6 +94,7 @@ public class TemplateHelper {
             LOG.warn("Exception happened while trying to parse template", e);
             throw(e);
         }
+        out.close();
     }
 
     public String getTemplate (String templateName, Object param) {
