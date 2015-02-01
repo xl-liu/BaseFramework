@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+  "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!--<constant name="struts.custom.i18n.resources" value="LocaleResource"/>-->
+    <!--<constant name="struts.enable.DynamicMethodInvocation" value="false" />-->
+    <!--<constant name="struts.devMode" value="true" />-->
+
+    <!--<include file="/com/RFramework/systemManagement/config/strutsConfig.xml"></include>-->
+
+    <!---->
+    <!--<package name="default" namespace="/" extends="struts-default, json-default">-->
+        <!--<interceptors>-->
+          <!--<interceptor-stack name="default">-->
+            <!--<interceptor-ref name="defaultStack">-->
+              <!--<param name="exception.logEnabled">true</param>  -->
+              <!--<param name="exception.logLevel">error</param>  -->
+            <!--</interceptor-ref>-->
+          <!--</interceptor-stack>-->
+        <!--</interceptors>-->
+        <!--<default-action-ref name="index" />-->
+
+        <!--<global-results>-->
+            <!--<result name="error">/error.jsp</result>-->
+        <!--</global-results>-->
+
+        <!--<global-exception-mappings>-->
+            <!--<exception-mapping exception="java.lang.Exception" result="error" />-->
+            <!--<exception-mapping exception="java.lang.Throwable" result="error" />-->
+        <!--</global-exception-mappings>-->
+
+        <!--<action name="main" class="successAction">-->
+            <!--<result name="success">/pages/main/main.jsp</result>-->
+        <!--</action>-->
+
+        <!--<action name="MAIN" class="successAction">-->
+            <!--<result name="success" type="chain">main</result>-->
+        <!--</action>-->
+
+        <!--<action name="login" class="successAction">-->
+            <!--<result name="success">/pages/main/login.jsp</result>-->
+        <!--</action>-->
+
+        <!--<action name="authCheck" class="authCheckAction" method="check">-->
+            <!--<result name="success" type="chain">main</result>-->
+            <!--<result name="login" type="chain">login</result>-->
+        <!--</action>-->
+
+        <!--<action name="loadMenuPage" class="successAction">-->
+            <!--<result name="success" type="freemarker">-->
+                <!--/templates/main/menu.ftl-->
+            <!--</result>-->
+        <!--</action>-->
+    <!--</package>-->
+
+    <!-- Add packages here -->
+
+</struts>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias alias="UserBean" type="com.RFramework.pojo.UserBean" />
+    </typeAliases>
+
+    <mappers>
+        <mapper resource="com/RFramework/systemManagement/config/mybatis-user-mapper.xml" />
+    </mappers>
+</configuration>

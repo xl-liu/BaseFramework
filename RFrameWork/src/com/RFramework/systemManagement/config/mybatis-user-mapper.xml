@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.RFramework.systemManagement.dao.UserDao">
+
+    <parameterMap type="map" id="paramMap">
+        <parameter property="userId" javaType="long" jdbcType="BIGINT"/>
+    </parameterMap>
+
+
+    <resultMap id="UserMap" type="UserBean">
+        <id property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="password" column="password" />
+        <result property="sex" column="sex" />
+        <result property="address" column="address" />
+        <result property="email" column="email" />
+    </resultMap>
+
+
+    <select id="getAll" resultMap="UserMap">
+      SELECT * FROM user where isDeleted = 0
+    </select>
+
+    <select id="getById" resultMap="UserMap" fetchSize="1">
+      SELECT * FROM user where isDeleted = 0 and uid = #{userId}
+    </select>
+
+    <select id="getByName" resultMap="UserMap" fetchSize="1">
+      SELECT * FROM user where isDeleted = 0 and name = #{userName}
+    </select>
+
+</mapper>
